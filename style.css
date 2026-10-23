@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b0d21;
+  color: #f0f0f5;
+  line-height: 1.6;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+nav a {
+  color: #9ec5ff;
+  margin-left: 1.5rem;
+  text-decoration: none;
+}
+section {
+  padding: 3rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.hero {
+  text-align: center;
+  padding: 6rem 2rem;
+}
