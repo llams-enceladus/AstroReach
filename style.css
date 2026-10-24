@@ -26,9 +26,37 @@ section{padding:var(--space) 0}
 nav a{color:var(--paper);text-decoration:none;margin-left:1.4rem;font-weight:500}
 nav a:hover{color:var(--gold)}
 
+/* AstroReach — design tokens: change a look here and it updates everywhere */
+:root{
+  --ink:#070a1f; --navy:#0e1330; --navy-2:#171d44; --line:#2a3166;
+  --paper:#f6f1e7; --muted:#aab0d6;
+  --blue:#7fb2ff; --coral:#ff6b6b; --teal:#3ddbd9; --violet:#8b7bff;
+  --radius:14px; --space:clamp(3.5rem,8vw,7rem);
+  --serif:"Exo 2",system-ui,sans-serif; --sans:"DM Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important}}
+body{margin:0;background:var(--ink);color:var(--paper);font:1.0625rem/1.65 var(--sans)}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1;margin:0 0 .6em;letter-spacing:-.01em}
+h1{font-size:clamp(2.6rem,6.5vw,5rem)} h2{font-size:clamp(1.9rem,4vw,3rem)} h3{font-size:1.35rem}
+p{margin:0 0 1em;max-width:62ch;color:#dcdff2}
+a{color:var(--blue)} a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 1.5rem}
+section{padding:var(--space) 0}
+.alt{background:var(--navy)}
+
+/* navigation */
+.site-header{position:sticky;top:0;z-index:10;background:rgba(7,10,31,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;justify-content:space-between;align-items:center;padding-block:.9rem;flex-wrap:wrap;gap:.5rem}
+.logo{font:700 1.5rem var(--serif);color:var(--paper);text-decoration:none}
+.logo span{color:var(--teal)}
+nav a{color:var(--paper);text-decoration:none;margin-left:1.4rem;font-weight:500}
+nav a:hover{color:var(--teal)}
+
 /* buttons */
-.btn{display:inline-block;padding:.85rem 1.5rem;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--gold);background:var(--gold);color:var(--ink)}
-.btn:hover{background:transparent;color:var(--gold)}
+.btn{display:inline-block;padding:.85rem 1.5rem;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--teal);background:var(--teal);color:var(--ink)}
+.btn:hover{background:transparent;color:var(--teal)}
 .btn.ghost{background:transparent;color:var(--paper);border-color:var(--line)}
 .btn.ghost:hover{border-color:var(--paper)}
 .actions{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem}
@@ -53,8 +81,8 @@ nav a:hover{color:var(--gold)}
 /* interactive demo (learn page) */
 .panel{background:var(--navy);border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem}
 .panel svg{width:100%;height:auto;display:block}
-input[type=range]{width:100%;accent-color:var(--gold)}
-.readout{font:600 1.1rem var(--serif);color:var(--gold)}
+input[type=range]{width:100%;accent-color:var(--teal)}
+.readout{font:600 1.1rem var(--serif);color:var(--teal)}
 
 footer{border-top:1px solid var(--line);padding:3rem 0;color:var(--muted);font-size:.95rem}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:2rem}
