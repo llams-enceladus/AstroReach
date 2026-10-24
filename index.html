@@ -3,41 +3,143 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AstroReach</title>
+  <title>AstroReach | Think like an astronomer</title>
+  <meta name="description" content="AstroReach is an independent astronomy education initiative helping middle school students investigate the universe with real data.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>AstroReach</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#programs">Programs</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html">Astro<span>Reach</span></a>
+      <nav aria-label="Main">
+        <a href="learn.html">Learn</a>
+        <a href="#programs">Programs</a>
+        <a href="#approach">Approach</a>
+        <a href="#join">Get involved</a>
+      </nav>
+    </div>
   </header>
 
   <main>
     <section class="hero">
-      <h2>Bringing the universe to everyone</h2>
-      <p>Your mission statement goes here.</p>
+      <div class="wrap">
+        <div>
+          <h1>Don't just memorize the universe. Investigate it.</h1>
+          <p>AstroReach is an independent astronomy initiative for middle school students. We teach the questions astronomers ask, and how to answer them with real data.</p>
+          <div class="actions">
+            <a class="btn" href="learn.html">Start exploring</a>
+            <a class="btn ghost" href="#approach">Our approach</a>
+          </div>
+        </div>
+        <!-- A planet crossing its star, with the dip in starlight it causes -->
+        <svg viewBox="0 0 400 400" role="img" aria-label="Diagram of a planet orbiting a star, with a light curve showing the dip in brightness when it passes in front">
+          <g fill="none" stroke="var(--line)" stroke-width="1.5">
+            <circle cx="200" cy="170" r="60"/><circle cx="200" cy="170" r="110" stroke-dasharray="3 7"/>
+          </g>
+          <circle cx="200" cy="170" r="26" fill="var(--gold)"/>
+          <g class="orbit" style="transform-origin:200px 170px">
+            <circle cx="310" cy="170" r="9" fill="var(--teal)"/>
+          </g>
+          <circle cx="90" cy="170" r="5" fill="var(--coral)"/>
+          <path d="M30 330 H130 Q150 330 160 352 H240 Q250 330 270 330 H370" fill="none" stroke="var(--blue)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="30" y="385" fill="var(--muted)" font-size="13" font-family="DM Sans, sans-serif">Brightness of a star over time</text>
+        </svg>
+      </div>
     </section>
 
-    <section id="about">
-      <h2>About</h2>
-      <p>Why you started AstroReach.</p>
+    <section class="alt" id="how">
+      <div class="wrap">
+        <h2>How learning works here</h2>
+        <div class="steps">
+          <div class="step" style="--c:var(--teal)"><h3>Ask</h3><p>Every lesson starts with a real question, like how we can tell a planet is hiding in a star's light.</p></div>
+          <div class="step" style="--c:var(--gold)"><h3>Explore</h3><p>Students change a graph, test an idea, and watch what happens before any rule is explained.</p></div>
+          <div class="step" style="--c:var(--coral)"><h3>Explain</h3><p>They put the pattern into words, then connect it to what astronomers actually do.</p></div>
+        </div>
+      </div>
     </section>
 
     <section id="programs">
-      <h2>Programs</h2>
-      <p>Stargazing nights, workshops, and more.</p>
+      <div class="wrap split">
+        <div>
+          <h2>Programs and investigations</h2>
+          <p>Short, guided activities built around real astronomical questions. More are on the way.</p>
+        </div>
+        <div class="programs">
+          <div class="program" style="--c:var(--teal)"><span class="dot"></span><div><span class="tag">Available now</span><h3>Finding a planet in a light curve</h3><p>Slide a planet across a star and see how its size changes the dip in brightness.</p><a href="learn.html">Try the investigation</a></div></div>
+          <div class="program" style="--c:var(--violet)"><span class="dot"></span><div><span class="tag" style="--c:var(--violet)">Planned</span><h3>Reading the night sky</h3><p>Describe what you see, then test your ideas against star maps.</p></div></div>
+          <div class="program" style="--c:var(--coral)"><span class="dot"></span><div><span class="tag" style="--c:var(--coral)">Planned</span><h3>Stargazing and workshops</h3><p>In-person sessions with schools and community groups.</p></div></div>
+        </div>
+      </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: hello@example.com</p>
+    <section class="alt" id="approach">
+      <div class="wrap split">
+        <h2>Science is a way of thinking, not a list of facts</h2>
+        <div>
+          <p>Students often meet astronomy as vocabulary: planets, orbits, galaxies. AstroReach aims to move past that, so students learn to make a claim, check it against evidence, and change their mind when the data says so.</p>
+          <p>Every activity uses real concepts and data sources, and we credit where images and data come from.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="join">
+      <div class="wrap">
+        <h2>Get involved</h2>
+        <p>Teacher, parent, student, or astronomer? We'd like to hear from you about bringing AstroReach to your classroom or helping us build it.</p>
+        <div class="actions"><a class="btn" href="mailto:hello@astroreach.org">Get in touch</a></div>
+      </div>
     </section>
   </main>
 
+  <footer>
+    <div class="wrap">
+      <div><a class="logo" href="index.html">Astro<span>Reach</span></a><p>Independent astronomy education for middle school students.</p></div>
+      <div><a href="learn.html">Learn</a><br><a href="#programs">Programs</a><br><a href="#approach">Approach</a></div>
+      <div><!-- Replace with an email you actually monitor -->hello@astroreach.org</div>
+    </div>
+  </footer>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn | AstroReach</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html">Astro<span>Reach</span></a>
+      <nav aria-label="Main"><a href="learn.html">Learn</a><a href="index.html#programs">Programs</a><a href="index.html#join">Get involved</a></nav>
+    </div>
+  </header>
+  <main>
+    <section>
+      <div class="wrap">
+        <h1>Finding a planet in a star's light</h1>
+        <p>Astronomers often find planets they can't see. When a planet passes in front of its star, the star gets a little dimmer. Change the planet's size and watch the dip.</p>
+        <div class="panel">
+          <svg id="graph" viewBox="0 0 600 260" role="img" aria-label="Light curve graph that updates as you change planet size"></svg>
+          <label for="size">Planet size (compared with the star's width)</label>
+          <input id="size" type="range" min="2" max="30" value="10">
+          <p class="readout" id="readout"></p>
+        </div>
+        <h2 style="margin-top:2.5rem">Investigate</h2>
+        <p>1. Make the planet twice as wide. Does the dip get twice as deep? Write down your prediction first.<br>2. Find the smallest planet whose dip you could still notice on a noisy graph.<br>3. Why might it be easier to find big planets than small ones?</p>
+        <p class="credit">Note: this graph is a simplified model for learning, not real telescope data. Real data lessons are planned.</p>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap"><a class="logo" href="index.html">Astro<span>Reach</span></a></div></footer>
   <script src="script.js"></script>
 </body>
 </html>
