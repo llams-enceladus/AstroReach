@@ -2,34 +2,6 @@
 :root{
   --ink:#070a1f; --navy:#0e1330; --navy-2:#171d44; --line:#2a3166;
   --paper:#f6f1e7; --muted:#aab0d6;
-  --blue:#7fb2ff; --gold:#ffc857; --coral:#ff6b6b; --teal:#3ddbd9; --violet:#8b7bff;
-  --radius:14px; --space:clamp(3.5rem,8vw,7rem);
-  --serif:"Fraunces",Georgia,serif; --sans:"DM Sans",system-ui,sans-serif;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important}}
-body{margin:0;background:var(--ink);color:var(--paper);font:1.0625rem/1.65 var(--sans)}
-h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1;margin:0 0 .6em;letter-spacing:-.01em}
-h1{font-size:clamp(2.6rem,6.5vw,5rem)} h2{font-size:clamp(1.9rem,4vw,3rem)} h3{font-size:1.35rem}
-p{margin:0 0 1em;max-width:62ch;color:#dcdff2}
-a{color:var(--blue)} a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
-.wrap{max-width:1120px;margin:0 auto;padding:0 1.5rem}
-section{padding:var(--space) 0}
-.alt{background:var(--navy)}
-
-/* navigation */
-.site-header{position:sticky;top:0;z-index:10;background:rgba(7,10,31,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.site-header .wrap{display:flex;justify-content:space-between;align-items:center;padding-block:.9rem;flex-wrap:wrap;gap:.5rem}
-.logo{font:600 1.4rem var(--serif);color:var(--paper);text-decoration:none}
-.logo span{color:var(--gold)}
-nav a{color:var(--paper);text-decoration:none;margin-left:1.4rem;font-weight:500}
-nav a:hover{color:var(--gold)}
-
-/* AstroReach — design tokens: change a look here and it updates everywhere */
-:root{
-  --ink:#070a1f; --navy:#0e1330; --navy-2:#171d44; --line:#2a3166;
-  --paper:#f6f1e7; --muted:#aab0d6;
   --blue:#7fb2ff; --coral:#ff6b6b; --teal:#3ddbd9; --violet:#8b7bff;
   --radius:14px; --space:clamp(3.5rem,8vw,7rem);
   --serif:"Exo 2",system-ui,sans-serif; --sans:"DM Sans",system-ui,sans-serif;
@@ -93,3 +65,8 @@ footer a{color:var(--paper)}
   .hero .wrap,.split,.steps{grid-template-columns:1fr}
   nav a{margin:0 1rem 0 0}
 }
+
+/* scroll-driven moon: script.js sets --x, --y and --s */
+.moon{position:fixed;top:0;left:0;width:clamp(40px,5vw,72px);z-index:5;pointer-events:none;
+  transform:translate(var(--x,85vw),var(--y,15vh)) scale(var(--s,1));will-change:transform}
+.moon svg{display:block;width:100%;height:auto}

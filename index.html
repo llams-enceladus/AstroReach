@@ -8,9 +8,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Exo+2:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ccircle cx=%2750%27 cy=%2750%27 r=%2744%27 fill=%27%235ce1e6%27 stroke=%27%23273b86%27 stroke-width=%278%27/%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Scroll-driven moon: positioned by script.js as the page scrolls -->
+  <div class="moon" id="moon" aria-hidden="true">
+    <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" fill="#5ce1e6" stroke="#273b86" stroke-width="8"/></svg>
+  </div>
+
   <header class="site-header">
     <div class="wrap">
       <a class="logo" href="index.html">Astro<span>Reach</span></a>
@@ -101,44 +107,6 @@
       <div><!-- Replace with an email you actually monitor -->hello@astroreach.org</div>
     </div>
   </footer>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Learn | AstroReach</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Exo+2:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="wrap">
-      <a class="logo" href="index.html">Astro<span>Reach</span></a>
-      <nav aria-label="Main"><a href="learn.html">Learn</a><a href="index.html#programs">Programs</a><a href="index.html#join">Get involved</a></nav>
-    </div>
-  </header>
-  <main>
-    <section>
-      <div class="wrap">
-        <h1>Finding a planet in a star's light</h1>
-        <p>Astronomers often find planets they can't see. When a planet passes in front of its star, the star gets a little dimmer. Change the planet's size and watch the dip.</p>
-        <div class="panel">
-          <svg id="graph" viewBox="0 0 600 260" role="img" aria-label="Light curve graph that updates as you change planet size"></svg>
-          <label for="size">Planet size (compared with the star's width)</label>
-          <input id="size" type="range" min="2" max="30" value="10">
-          <p class="readout" id="readout"></p>
-        </div>
-        <h2 style="margin-top:2.5rem">Investigate</h2>
-        <p>1. Make the planet twice as wide. Does the dip get twice as deep? Write down your prediction first.<br>2. Find the smallest planet whose dip you could still notice on a noisy graph.<br>3. Why might it be easier to find big planets than small ones?</p>
-        <p class="credit">Note: this graph is a simplified model for learning, not real telescope data. Real data lessons are planned.</p>
-      </div>
-    </section>
-  </main>
-  <footer><div class="wrap"><a class="logo" href="index.html">Astro<span>Reach</span></a></div></footer>
   <script src="script.js"></script>
 </body>
 </html>
