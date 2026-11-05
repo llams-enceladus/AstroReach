@@ -1,4 +1,4 @@
-// Simple transit model: dip depth = (planet width / star width)^2
+/// Simple transit model: dip depth = (planet width / star width)^2
 const slider = document.getElementById('size');
 const graph = document.getElementById('graph');
 const readout = document.getElementById('readout');
@@ -42,4 +42,14 @@ if (moon) {
     window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(placeMoon); } }, { passive: true });
     window.addEventListener('resize', placeMoon);
   }
+}
+
+
+// Show the intro screen once per browser session, not on every page visit.
+const splash = document.getElementById('splash');
+if (splash) {
+  try {
+    if (sessionStorage.getItem('astroreachIntro')) splash.remove();
+    else sessionStorage.setItem('astroreachIntro', '1');
+  } catch (e) { /* storage blocked: the intro just plays every time */ }
 }
