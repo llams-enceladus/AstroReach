@@ -75,12 +75,23 @@ footer a{color:var(--paper)}
 .logo-icon{display:block;width:40px;line-height:0}
 .logo-icon svg{width:100%;height:auto}
 
-/* intro screen on the homepage: fades away on its own, no JavaScript needed */
-.splash{position:fixed;inset:0;z-index:100;display:grid;place-items:center;background:var(--ink);
-  animation:splash-out 2.4s ease forwards}
-.wordmark{font:700 clamp(2.8rem,10vw,6.5rem)/1 var(--serif);color:var(--paper);letter-spacing:-.01em;
-  animation:rise 1.1s ease both}
+
+/* start page: just the logo */
+.start{min-height:calc(100svh - 70px);display:grid;place-items:center;position:relative;padding:2rem 1.5rem}
+.wordmark{font:700 clamp(2.8rem,10vw,6.5rem)/1 var(--serif);color:var(--paper);letter-spacing:-.01em;text-align:center}
+.start .wordmark{margin:0;font-size:clamp(3rem,13vw,9rem)}
 .wordmark .o{display:inline-block;width:.6em;height:.6em;vertical-align:baseline;margin:0 .03em}
-@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
-@keyframes splash-out{0%,72%{opacity:1;visibility:visible}100%{opacity:0;visibility:hidden}}
-@media (prefers-reduced-motion:reduce){.splash{display:none}}
+.cue{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);font-size:1.8rem;color:var(--muted);text-decoration:none}
+.cue:hover{color:var(--teal)}
+
+/* quote */
+.quote{margin:0;text-align:center}
+.quote p{font:600 clamp(1.6rem,4vw,2.8rem)/1.25 var(--serif);max-width:24ch;margin:0 auto 1rem;color:var(--paper)}
+.quote footer{border:0;padding:0;color:var(--teal);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.9rem}
+
+/* clickable pillars */
+.pillar{display:block;border-top:4px solid var(--c);padding-top:1rem;text-decoration:none;color:inherit}
+.pillar h3{font-size:1.8rem}
+.pillar p{color:#dcdff2}
+.pillar span{color:var(--c);font-weight:700}
+.pillar:hover h3,.pillar:hover span{text-decoration:underline}

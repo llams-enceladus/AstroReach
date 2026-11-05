@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AstroReach | Think like an astronomer</title>
-  <meta name="description" content="AstroReach is an independent astronomy education initiative helping middle school students investigate the universe with real data.">
+  <title>AstroReach</title>
+  <meta name="description" content="AstroReach is an independent astronomy initiative for middle school students.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Exo+2:wght@600;700&display=swap" rel="stylesheet">
@@ -12,103 +12,221 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Intro screen: the wordmark with the moon as the "o" in Astro. Fades out by itself (CSS) -->
-  <div class="splash" id="splash" role="img" aria-label="AstroReach">
-    <div class="wordmark" aria-hidden="true">Astr<svg class="o" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="#5ce1e6" stroke="#273b86" stroke-width="8"/></svg>Reach</div>
-  </div>
-  <!-- Scroll-driven moon: positioned by script.js as the page scrolls -->
-  <div class="moon" id="moon" aria-hidden="true">
-    <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" fill="#5ce1e6" stroke="#273b86" stroke-width="8"/></svg>
-  </div>
+  <!-- Scroll-driven moon: positioned by script.js -->
+  <div class="moon" id="moon" aria-hidden="true"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="#5ce1e6" stroke="#273b86" stroke-width="8"/></svg></div>
 
   <header class="site-header">
     <div class="wrap">
       <a class="logo logo-icon" href="index.html" aria-label="AstroReach home"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="#5ce1e6" stroke="#273b86" stroke-width="8"/></svg></a>
       <nav aria-label="Main">
-        <a href="learn.html">Learn</a>
-        <a href="#programs">Programs</a>
-        <a href="#approach">Approach</a>
-        <a href="#join">Get involved</a>
+        <a href="research.html">Research</a>
+        <a href="workshops.html">Workshops</a>
+        <a href="impact.html">Impact</a>
+        <a href="index.html#join">Get involved</a>
+        <a href="index.html#donate">Donate</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero">
+    <!-- Start page: just the logo -->
+    <section class="start" aria-label="AstroReach">
+      <h1 class="wordmark" aria-label="AstroReach">Astr<svg class="o" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="#5ce1e6" stroke="#273b86" stroke-width="8"/></svg>Reach</h1>
+      <a class="cue" href="#who" aria-label="Scroll down">&#8595;</a>
+    </section>
+
+    <section class="alt" id="who">
       <div class="wrap">
-        <div>
-          <h1>Don't just memorize the universe. Investigate it.</h1>
-          <p>AstroReach is an independent astronomy initiative for middle school students. We teach the questions astronomers ask, and how to answer them with real data.</p>
-          <div class="actions">
-            <a class="btn" href="learn.html">Start exploring</a>
-            <a class="btn ghost" href="#approach">Our approach</a>
-          </div>
-        </div>
-        <!-- A planet crossing its star, with the dip in starlight it causes -->
-        <svg viewBox="0 0 400 400" role="img" aria-label="Diagram of a planet orbiting a star, with a light curve showing the dip in brightness when it passes in front">
-          <g fill="none" stroke="var(--line)" stroke-width="1.5">
-            <circle cx="200" cy="170" r="60"/><circle cx="200" cy="170" r="110" stroke-dasharray="3 7"/>
-          </g>
-          <circle cx="200" cy="170" r="26" fill="var(--blue)"/>
-          <g class="orbit" style="transform-origin:200px 170px">
-            <circle cx="310" cy="170" r="9" fill="var(--teal)"/>
-          </g>
-          <circle cx="90" cy="170" r="5" fill="var(--coral)"/>
-          <path d="M30 330 H130 Q150 330 160 352 H240 Q250 330 270 330 H370" fill="none" stroke="var(--blue)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-          <text x="30" y="385" fill="var(--muted)" font-size="13" font-family="DM Sans, sans-serif">Brightness of a star over time</text>
-        </svg>
+        <blockquote class="quote">
+          <p>&ldquo;The universe belongs to anyone curious enough to look up.&rdquo;</p>
+          <footer>AstroReach</footer>
+        </blockquote>
       </div>
     </section>
 
-    <section class="alt" id="how">
+    <section id="pillars">
       <div class="wrap">
-        <h2>How learning works here</h2>
+        <h2>What we do</h2>
         <div class="steps">
-          <div class="step" style="--c:var(--teal)"><h3>Ask</h3><p>Every lesson starts with a real question, like how we can tell a planet is hiding in a star's light.</p></div>
-          <div class="step" style="--c:var(--blue)"><h3>Explore</h3><p>Students change a graph, test an idea, and watch what happens before any rule is explained.</p></div>
-          <div class="step" style="--c:var(--coral)"><h3>Explain</h3><p>They put the pattern into words, then connect it to what astronomers actually do.</p></div>
+          <a class="pillar" style="--c:var(--teal)" href="research.html"><h3>Research</h3><p>Original questions about the universe, grounded in real astronomical data.</p><span>Explore research &rarr;</span></a>
+          <a class="pillar" style="--c:var(--blue)" href="workshops.html"><h3>Workshops</h3><p>Hands-on sessions for classrooms and community groups.</p><span>See workshops &rarr;</span></a>
+          <a class="pillar" style="--c:var(--violet)" href="impact.html"><h3>Impact</h3><p>What AstroReach does, and what we share openly about it.</p><span>Read about impact &rarr;</span></a>
         </div>
       </div>
     </section>
 
-    <section id="programs">
+    <section class="alt" id="join">
       <div class="wrap split">
         <div>
-          <h2>Programs and investigations</h2>
-          <p>Short, guided activities built around real astronomical questions. More are on the way.</p>
+          <h2>Get involved</h2>
+          <p>Teacher, parent, student, or astronomer? We&rsquo;d like to hear from you about bringing AstroReach to your school or helping us build it.</p>
+          <div class="actions"><a class="btn" href="mailto:hello@astroreach.org?subject=Getting%20involved%20with%20AstroReach">Get in touch</a></div>
         </div>
-        <div class="programs">
-          <div class="program" style="--c:var(--teal)"><span class="dot"></span><div><span class="tag">Available now</span><h3>Finding a planet in a light curve</h3><p>Slide a planet across a star and see how its size changes the dip in brightness.</p><a href="learn.html">Try the investigation</a></div></div>
-          <div class="program" style="--c:var(--violet)"><span class="dot"></span><div><span class="tag" style="--c:var(--violet)">Planned</span><h3>Reading the night sky</h3><p>Describe what you see, then test your ideas against star maps.</p></div></div>
-          <div class="program" style="--c:var(--coral)"><span class="dot"></span><div><span class="tag" style="--c:var(--coral)">Planned</span><h3>Stargazing and workshops</h3><p>In-person sessions with schools and community groups.</p></div></div>
+        <div id="donate">
+          <h2>Support our work</h2>
+          <p>AstroReach is an independent initiative. If you&rsquo;d like to support it, we&rsquo;d be glad to hear from you.</p>
+          <!-- When you set up a payment page (Zeffy, Givebutter, PayPal, etc.), replace this mailto with that link -->
+          <div class="actions"><a class="btn ghost" href="mailto:hello@astroreach.org?subject=Supporting%20AstroReach">Donate</a></div>
         </div>
-      </div>
-    </section>
-
-    <section class="alt" id="approach">
-      <div class="wrap split">
-        <h2>Science is a way of thinking, not a list of facts</h2>
-        <div>
-          <p>Students often meet astronomy as vocabulary: planets, orbits, galaxies. AstroReach aims to move past that, so students learn to make a claim, check it against evidence, and change their mind when the data says so.</p>
-          <p>Every activity uses real concepts and data sources, and we credit where images and data come from.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="join">
-      <div class="wrap">
-        <h2>Get involved</h2>
-        <p>Teacher, parent, student, or astronomer? We'd like to hear from you about bringing AstroReach to your classroom or helping us build it.</p>
-        <div class="actions"><a class="btn" href="mailto:hello@astroreach.org">Get in touch</a></div>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="wrap">
-      <div><a class="logo" href="index.html">Astro<span>Reach</span></a><p>Independent astronomy education for middle school students.</p></div>
-      <div><a href="learn.html">Learn</a><br><a href="#programs">Programs</a><br><a href="#approach">Approach</a></div>
-      <div><!-- Replace with an email you actually monitor -->hello@astroreach.org</div>
+      <div><a class="logo" href="index.html">Astro<span>Reach</span></a><p>An independent astronomy initiative for middle school students.</p></div>
+      <div><a href="research.html">Research</a><br><a href="workshops.html">Workshops</a><br><a href="impact.html">Impact</a></div>
+      <div><a href="index.html#join">Get involved</a><br><a href="index.html#donate">Donate</a><br><!-- Replace with an email you actually monitor --><a href="mailto:hello@astroreach.org">hello@astroreach.org</a></div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research | AstroReach</title>
+  <meta name="description" content="AstroReach is an independent astronomy initiative for middle school students.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Exo+2:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ccircle cx=%2750%27 cy=%2750%27 r=%2744%27 fill=%27%235ce1e6%27 stroke=%27%23273b86%27 stroke-width=%278%27/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Scroll-driven moon: positioned by script.js -->
+  <div class="moon" id="moon" aria-hidden="true"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="#5ce1e6" stroke="#273b86" stroke-width="8"/></svg></div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo logo-icon" href="index.html" aria-label="AstroReach home"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="#5ce1e6" stroke="#273b86" stroke-width="8"/></svg></a>
+      <nav aria-label="Main">
+        <a href="research.html">Research</a>
+        <a href="workshops.html">Workshops</a>
+        <a href="impact.html">Impact</a>
+        <a href="index.html#join">Get involved</a>
+        <a href="index.html#donate">Donate</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="wrap">
+        <h1>Research</h1>
+        <p>Original questions about the universe, grounded in real astronomical data. This page is under construction; we&rsquo;ll share projects here as they take shape.</p>
+        <div class="actions"><a class="btn" href="mailto:hello@astroreach.org">Get in touch</a><a class="btn ghost" href="index.html">Back to home</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div><a class="logo" href="index.html">Astro<span>Reach</span></a><p>An independent astronomy initiative for middle school students.</p></div>
+      <div><a href="research.html">Research</a><br><a href="workshops.html">Workshops</a><br><a href="impact.html">Impact</a></div>
+      <div><a href="index.html#join">Get involved</a><br><a href="index.html#donate">Donate</a><br><!-- Replace with an email you actually monitor --><a href="mailto:hello@astroreach.org">hello@astroreach.org</a></div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workshops | AstroReach</title>
+  <meta name="description" content="AstroReach is an independent astronomy initiative for middle school students.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Exo+2:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ccircle cx=%2750%27 cy=%2750%27 r=%2744%27 fill=%27%235ce1e6%27 stroke=%27%23273b86%27 stroke-width=%278%27/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Scroll-driven moon: positioned by script.js -->
+  <div class="moon" id="moon" aria-hidden="true"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="#5ce1e6" stroke="#273b86" stroke-width="8"/></svg></div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo logo-icon" href="index.html" aria-label="AstroReach home"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="#5ce1e6" stroke="#273b86" stroke-width="8"/></svg></a>
+      <nav aria-label="Main">
+        <a href="research.html">Research</a>
+        <a href="workshops.html">Workshops</a>
+        <a href="impact.html">Impact</a>
+        <a href="index.html#join">Get involved</a>
+        <a href="index.html#donate">Donate</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="wrap">
+        <h1>Workshops</h1>
+        <p>Hands-on sessions for classrooms and community groups. Details are coming soon. If you&rsquo;d like to host one, get in touch.</p>
+        <div class="actions"><a class="btn" href="mailto:hello@astroreach.org">Get in touch</a><a class="btn ghost" href="index.html">Back to home</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div><a class="logo" href="index.html">Astro<span>Reach</span></a><p>An independent astronomy initiative for middle school students.</p></div>
+      <div><a href="research.html">Research</a><br><a href="workshops.html">Workshops</a><br><a href="impact.html">Impact</a></div>
+      <div><a href="index.html#join">Get involved</a><br><a href="index.html#donate">Donate</a><br><!-- Replace with an email you actually monitor --><a href="mailto:hello@astroreach.org">hello@astroreach.org</a></div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impact | AstroReach</title>
+  <meta name="description" content="AstroReach is an independent astronomy initiative for middle school students.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Exo+2:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ccircle cx=%2750%27 cy=%2750%27 r=%2744%27 fill=%27%235ce1e6%27 stroke=%27%23273b86%27 stroke-width=%278%27/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Scroll-driven moon: positioned by script.js -->
+  <div class="moon" id="moon" aria-hidden="true"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="#5ce1e6" stroke="#273b86" stroke-width="8"/></svg></div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo logo-icon" href="index.html" aria-label="AstroReach home"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="#5ce1e6" stroke="#273b86" stroke-width="8"/></svg></a>
+      <nav aria-label="Main">
+        <a href="research.html">Research</a>
+        <a href="workshops.html">Workshops</a>
+        <a href="impact.html">Impact</a>
+        <a href="index.html#join">Get involved</a>
+        <a href="index.html#donate">Donate</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="wrap">
+        <h1>Impact</h1>
+        <p>This is where we&rsquo;ll share what AstroReach does and what we learn from it, using only results we can back up.</p>
+        <div class="actions"><a class="btn" href="mailto:hello@astroreach.org">Get in touch</a><a class="btn ghost" href="index.html">Back to home</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div><a class="logo" href="index.html">Astro<span>Reach</span></a><p>An independent astronomy initiative for middle school students.</p></div>
+      <div><a href="research.html">Research</a><br><a href="workshops.html">Workshops</a><br><a href="impact.html">Impact</a></div>
+      <div><a href="index.html#join">Get involved</a><br><a href="index.html#donate">Donate</a><br><!-- Replace with an email you actually monitor --><a href="mailto:hello@astroreach.org">hello@astroreach.org</a></div>
     </div>
   </footer>
   <script src="script.js"></script>
@@ -129,7 +247,13 @@
   <header class="site-header">
     <div class="wrap">
       <a class="logo logo-icon" href="index.html" aria-label="AstroReach home"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="#5ce1e6" stroke="#273b86" stroke-width="8"/></svg></a>
-      <nav aria-label="Main"><a href="learn.html">Learn</a><a href="index.html#programs">Programs</a><a href="index.html#join">Get involved</a></nav>
+      <nav aria-label="Main">
+        <a href="research.html">Research</a>
+        <a href="workshops.html">Workshops</a>
+        <a href="impact.html">Impact</a>
+        <a href="index.html#join">Get involved</a>
+        <a href="index.html#donate">Donate</a>
+      </nav>
     </div>
   </header>
   <main>
