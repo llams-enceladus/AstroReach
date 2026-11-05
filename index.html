@@ -12,64 +12,122 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Scroll-driven moon: positioned by script.js -->
-  <div class="moon" id="moon" aria-hidden="true"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="#5ce1e6" stroke="#273b86" stroke-width="8"/></svg></div>
+  <!-- Moon: starts as the "o" in the logo, travels to the header as you scroll (see script.js) -->
+  <div class="moon" id="moon" aria-hidden="true"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" fill="#5ce1e6" stroke="#273b86" stroke-width="8"/></svg></div>
 
   <header class="site-header">
     <div class="wrap">
-      <a class="logo logo-icon" href="index.html" aria-label="AstroReach home"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="#5ce1e6" stroke="#273b86" stroke-width="8"/></svg></a>
+      <a class="home" href="index.html" aria-label="AstroReach home"><span class="home-dot"></span></a>
       <nav aria-label="Main">
         <a href="research.html">Research</a>
         <a href="workshops.html">Workshops</a>
         <a href="impact.html">Impact</a>
-        <a href="index.html#join">Get involved</a>
-        <a href="index.html#donate">Donate</a>
+        <a href="#involved">Get involved</a>
+        <a class="btn small" href="donate.html">Donate</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Start page: just the logo -->
+    <!-- 1. Opening logo -->
     <section class="start" aria-label="AstroReach">
       <h1 class="wordmark" aria-label="AstroReach">
-        <span class="row" aria-hidden="true"><span>A</span><span>S</span><span>T</span><span>R</span><svg class="o" id="logoO" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="#5ce1e6" stroke="#273b86" stroke-width="8"/></svg></span>
+        <span class="row" aria-hidden="true"><span>A</span><span>S</span><span>T</span><span>R</span><svg class="o" id="logoO" viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" fill="#5ce1e6" stroke="#273b86" stroke-width="8"/></svg></span>
         <span class="row" aria-hidden="true"><span>R</span><span>E</span><span>A</span><span>C</span><span>H</span></span>
       </h1>
-      <a class="cue" href="#who" aria-label="Scroll down">&#8595;</a>
+      <a class="cue" href="#about" aria-label="Scroll down">&#8595;</a>
     </section>
 
-    <section class="alt" id="who">
+    <!-- 2. What we do -->
+    <section id="about">
       <div class="wrap">
-        <blockquote class="quote">
-          <p>&ldquo;The universe belongs to anyone curious enough to look up.&rdquo;</p>
-          <footer>AstroReach</footer>
-        </blockquote>
-      </div>
-    </section>
-
-    <section id="pillars">
-      <div class="wrap">
-        <h2>What we do</h2>
-        <div class="steps">
-          <a class="pillar" style="--c:var(--teal)" href="research.html"><h3>Research</h3><p>Original questions about the universe, grounded in real astronomical data.</p><span>Explore research &rarr;</span></a>
-          <a class="pillar" style="--c:var(--blue)" href="workshops.html"><h3>Workshops</h3><p>Hands-on sessions for classrooms and community groups.</p><span>See workshops &rarr;</span></a>
-          <a class="pillar" style="--c:var(--violet)" href="impact.html"><h3>Impact</h3><p>What AstroReach does, and what we share openly about it.</p><span>Read about impact &rarr;</span></a>
+        <div class="feature">
+          <h2>What we do</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <div class="actions">
+            <a class="btn" href="donate.html">Donate</a>
+            <a class="btn ghost" href="#story">Our story</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="alt" id="join">
-      <div class="wrap split">
+    <!-- 3. Research / Workshops / Impact -->
+    <section class="alt" id="pillars">
+      <div class="wrap">
+        <div class="cards">
+          <article class="card">
+            <div class="photo" role="img" aria-label="Photo placeholder"></div>
+            <div class="card-body">
+              <h3>Research</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+              <a class="btn" href="research.html">Learn more</a>
+            </div>
+          </article>
+          <article class="card">
+            <div class="photo" role="img" aria-label="Photo placeholder"></div>
+            <div class="card-body">
+              <h3>Workshops</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+              <a class="btn" href="workshops.html">Learn more</a>
+            </div>
+          </article>
+          <article class="card">
+            <div class="photo" role="img" aria-label="Photo placeholder"></div>
+            <div class="card-body">
+              <h3>Impact</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+              <a class="btn" href="impact.html">Learn more</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Be a part of AstroReach -->
+    <section id="involved">
+      <div class="wrap center">
+        <h2>Be a part of AstroReach</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+        <div class="actions center-actions">
+          <a class="btn" href="volunteer.html">Volunteer sign-up</a>
+          <a class="btn" href="workshop-signup.html">Workshop sign-up</a>
+          <a class="btn ghost" href="contact.html">Contact us</a>
+          <a class="btn ghost" href="donate.html">Donate</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. What a donation can do -->
+    <section class="alt" id="donate">
+      <div class="wrap">
+        <h2>What a donation can do</h2>
+        <p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+        <div class="tiers">
+          <div class="tier"><div class="amount">$10</div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
+          <div class="tier"><div class="amount">$25</div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
+          <div class="tier"><div class="amount">$50</div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
+          <div class="tier"><div class="amount">$100</div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
+        </div>
+        <div class="actions">
+          <!-- Replace with your payment page link when it exists -->
+          <a class="btn" href="donate.html">Donate</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Mission and founding story -->
+    <section id="story">
+      <div class="wrap story">
         <div>
-          <h2>Get involved</h2>
-          <p>Teacher, parent, student, or astronomer? We&rsquo;d like to hear from you about bringing AstroReach to your school or helping us build it.</p>
-          <div class="actions"><a class="btn" href="mailto:hello@astroreach.org?subject=Getting%20involved%20with%20AstroReach">Get in touch</a></div>
+          <h2>Our mission</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-        <div id="donate">
-          <h2>Support our work</h2>
-          <p>AstroReach is an independent initiative. If you&rsquo;d like to support it, we&rsquo;d be glad to hear from you.</p>
-          <!-- When you set up a payment page (Zeffy, Givebutter, PayPal, etc.), replace this mailto with that link -->
-          <div class="actions"><a class="btn ghost" href="mailto:hello@astroreach.org?subject=Supporting%20AstroReach">Donate</a></div>
+        <div>
+          <h2>How we started</h2>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
       </div>
     </section>
@@ -77,9 +135,9 @@
 
   <footer>
     <div class="wrap">
-      <div><a class="logo" href="index.html">Astro<span>Reach</span></a><p>An independent astronomy initiative for middle school students.</p></div>
+      <div><strong class="foot-logo">AstroReach</strong><p>An independent astronomy initiative for middle school students.</p></div>
       <div><a href="research.html">Research</a><br><a href="workshops.html">Workshops</a><br><a href="impact.html">Impact</a></div>
-      <div><a href="index.html#join">Get involved</a><br><a href="index.html#donate">Donate</a><br><!-- Replace with an email you actually monitor --><a href="mailto:hello@astroreach.org">hello@astroreach.org</a></div>
+      <div><a href="volunteer.html">Volunteer</a><br><a href="contact.html">Contact</a><br><a href="donate.html">Donate</a></div>
     </div>
   </footer>
   <script src="script.js"></script>
