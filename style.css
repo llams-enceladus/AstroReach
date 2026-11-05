@@ -95,3 +95,10 @@ footer a{color:var(--paper)}
 .pillar p{color:#dcdff2}
 .pillar span{color:var(--c);font-weight:700}
 .pillar:hover h3,.pillar:hover span{text-decoration:underline}
+
+/* stacked logo: ASTR+moon over REACH, both rows the same width */
+.start .wordmark{display:inline-flex;flex-direction:column;margin:0;
+  font:800 clamp(3.2rem,21vw,12rem)/1 "Montserrat",var(--sans);letter-spacing:0;text-align:left}
+.start .wordmark .row{display:flex;justify-content:space-between;align-items:center}
+.start .wordmark .o{width:.9em;height:.9em;flex:none;margin:0}
+.moon-js .start .o{visibility:hidden} /* the moon has leapt out of the logo */
